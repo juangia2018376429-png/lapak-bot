@@ -29,7 +29,7 @@ def send_welcome(message):
 
 # ------------------------------------
 
-if _name_ == "_main_":
+if __name__ == "__main__":
   # Arrancamos Flask en un hilo secundario para abrir el puerto web
   t = threading.Thread(target=run_flask)
   t.start()
