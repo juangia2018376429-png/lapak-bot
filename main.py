@@ -78,6 +78,6 @@ def handle_recharge(message):
     bot.reply_to(message, f"⚠️ Error interno en el bot: {str(e)}")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
   print("Bot iniciado y escuchando...")
   bot.infinity_polling()
