@@ -8,7 +8,7 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 # Servidor web falso para cumplir con los requisitos de Render
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route("/")
