@@ -11,7 +11,7 @@ LAPAK_KEY = os.environ.get("LAPAK_SECRET_KEY")
 bot = telebot.TeleBot(TOKEN)
 
 # Servidor web falso para cumplir con el requisito de puertos de Render
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -76,7 +76,7 @@ def procesar_recarga(message):
     bot.reply_to(message, f"❌ Error interno al procesar la recarga: {str(e)}")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
   # Arrancamos Flask en un hilo secundario para abrir el puerto web
   t = threading.Thread(target=run_flask)
   t.start()
